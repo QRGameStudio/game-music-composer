@@ -1,6 +1,11 @@
+/// <reference path="./keyboard.ts" />
+
 const init = () => {
-    const content = document.getElementById("game-content");
-    content.innerHTML = "";
+  // @ts-ignore
+  new GTheme().apply();
+  const content = document.getElementById("game-content");
+  content.innerHTML = "";
+  new Keyboard(content).draw();
 };
 
 window.onload = init;
